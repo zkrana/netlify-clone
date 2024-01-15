@@ -1,0 +1,7 @@
+.transparent {
+  --_filter: blur(5px) saturate(200%);
+  backdrop-filter: var(--_filter);
+  -webkit-backdrop-filter: var(--_filter);
+  background-color: var(--color-bg-translucent);
+  position: relative;
+}
