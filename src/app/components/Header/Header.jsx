@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
 import Image from "next/image";
-import Search from "../Search/Search";
-import HeaderContact from "../HeaderContact/HeaderContact";
+import Search from "../home/Search/Search";
+import HeaderContact from "../home/HeaderContact/HeaderContact";
 
 function Header() {
   const [transparentBg, setTransparentBg] = useState(true);
@@ -30,18 +30,18 @@ function Header() {
     };
   }, []); // Empty dependency array means this effect runs once on mount
 
-  const headerClasses = `navigation fixed top-0 left-0 right-0 h-[72px] ${
+  const headerClasses = `navigation fixed top-0 left-0 right-0 z-10 h-[72px] ${
     transparentBg ? "transparent" : "opaque"
   }`;
 
   return (
     <div className={headerClasses}>
-      <div className="container flex justify-between items-center max-w-7xl mx-auto">
-        <div className="nav-menu flex gap-6 items-center px-4 py-3">
+      <div className="container flex justify-between items-center max-w-7xl mx-auto web:px-0 px-4">
+        <div className="nav-menu flex xl:gap-6 gap-4 items-center sm:px-4 py-3">
           <a href="/">
             <Image src="/logo.svg" width={122} height={50} alt="Logo" />
           </a>
-          <ul className="flex gap-5 items-center text-lg font-medium">
+          <ul className=" xl:gap-5 gap-3 items-center xl:text-lg text-base xl:font-medium hidden lg:flex">
             <li className="hover:scale-95 duration-300">
               <a href="/Platform">Platform</a>
             </li>
@@ -62,7 +62,7 @@ function Header() {
             </li>
           </ul>
         </div>
-        <div className="actions flex gap-7 items-center">
+        <div className="actions flex xl:gap-7 gap-4 items-center">
           <Search />
           <HeaderContact />
         </div>

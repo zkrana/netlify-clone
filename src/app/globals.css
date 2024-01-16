@@ -41,4 +41,48 @@ body {
     background-position: 100% 20%;
     background-size: cover;
   }
+  .yt-lite {
+    @apply w-full max-w-3xl mx-auto border-2 border-gray-300 rounded-md;
+    height: 450px;
+  }
+  .yt-lite > .lty-playbtn,
+  .yt-lite:hover > .lty-playbtn {
+    @apply !bg-white xl:!w-28 lg:!w-20 !w-16 xl:!h-28 lg:!h-20 !h-16 !rounded-full;
+  }
+
+  .yt-lite > .lty-playbtn::before {
+    content: "";
+    border-color: transparent transparent transparent #316bf4 !important;
+    border-style: solid;
+    border-width: 11px 0 11px 19px;
+  }
+  .home-hero .video {
+    box-shadow: 0 0 100px 0 #80abfa66 !important;
+  }
+  @media screen and (max-width: 1024px) {
+    .yt-lite {
+      height: 350px !important;
+    }
+  }
+  @media screen and (max-width: 834px) {
+    .yt-lite {
+      height: 250px !important;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .yt-lite {
+      height: 220px !important;
+    }
+  }
+
+  .review {
+    box-shadow: 0 0 60px 0 #80abfa66;
+  }
+  .separator {
+    align-self: stretch;
+    background-color: rgb(50, 230, 226);
+    flex-shrink: 0;
+    transform: rotate(20deg);
+    width: 2px;
+  }
 }
