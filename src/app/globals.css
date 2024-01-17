@@ -75,6 +75,10 @@ body {
     }
   }
 
+  /* 
+  Reviewer 
+  Components
+  */
   .review {
     box-shadow: 0 0 60px 0 #80abfa66;
   }
@@ -84,5 +88,11 @@ body {
     flex-shrink: 0;
     transform: rotate(20deg);
     width: 2px;
+  }
+  @media screen and (max-width: 420px) {
+    .company-logos img {
+      width: 100%;
+      object-fit: contain;
+    }
   }
 }

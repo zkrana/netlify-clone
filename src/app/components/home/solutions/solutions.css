@@ -55,3 +55,17 @@
   height: 100%;
   object-fit: contain;
 }
+@media screen and (max-width: 1024px) {
+  .enterprise-banner > div {
+    width: 90px;
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .enterprise-banner > div {
+    width: 70px;
+    height: 56px;
+    object-fit: contain;
+  }
+}

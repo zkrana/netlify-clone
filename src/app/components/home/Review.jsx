@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image";
 
 function Review() {
   return (
-    <div className="container tab:max-w-7xl w-[90%] mx-auto -mt-40">
+    <div className="container tab:max-w-7xl w-[90%] mx-auto lg:-mt-40 sm:-mt-32 -mt-20">
       <div className="review max-w-5xl mx-auto rounded-md p-7 bg-white">
         <div className="testimonial">
           <figure className="company-logos flex items-center gap-5">
@@ -35,6 +36,23 @@ function Review() {
           </strong>
           "
         </p>
+        <div className="author flex items-center gap-3 xl:mt-14 tab:mt-9 mt-5">
+          <Image
+            className=" rounded-full"
+            src="/reviewer/jason-rose.jpg"
+            alt="author"
+            width={70}
+            height={70}
+          />
+          <div className="author-details flex flex-col gap-2">
+            <span className="sm:text-lg text-base font-bold text-black block">
+              Jason Rose
+            </span>
+            <span className="sm:text-sm text-xs sm:max-w-40 text-black block">
+              Senior Web Developer, Riot Games
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );
