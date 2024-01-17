@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const navigationData = [
   {
@@ -56,18 +57,51 @@ const navigationData = [
 ];
 
 function NavigationSection({ header, linksText }) {
+  const [showLink, setShowLink] = useState(false);
+
+  const showFooterNav = (e) => {
+    e.preventDefault();
+    setShowLink((prevShowLink) => !prevShowLink);
+  };
+
   return (
     <ul className="xl:w-[calc(20%-64px)] lg:w-[calc(20%-45px)] tab:w-[calc(25%-29.3333px)] sm:w-[calc(33.3333%-29.3333px)] w-full text-[#545A61] text-sm">
       <li className="f-nav-header text-black text-lg font-semibold mb-3">
-        {header}
+        <span className="sm:block hidden"> {header} </span>
+        <div
+          className="sm:hidden flex justify-between items-center"
+          onClick={showFooterNav}
+        >
+          {header}
+          <div className=" transform rotate-90">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+            </svg>
+          </div>
+        </div>
       </li>
-      {linksText.map((link, index) => (
-        <li key={index} className="pb-2">
-          <a href="" className="hover:underline">
-            {link}
-          </a>
-        </li>
-      ))}
+      <div className="sm:block hidden">
+        {linksText.map((link, index) => (
+          <li key={index} className="pb-2">
+            <a href="" className="hover:underline">
+              {link}
+            </a>
+          </li>
+        ))}
+      </div>
+      <div className="sm:hidden block transition-all">
+        {showLink && (
+          <>
+            {linksText.map((link, index) => (
+              <li key={index} className="pb-2">
+                <a href="" className="hover:underline">
+                  {link}
+                </a>
+              </li>
+            ))}
+          </>
+        )}
+      </div>
     </ul>
   );
 }

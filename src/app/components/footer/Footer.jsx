@@ -1,8 +1,11 @@
-import React from "react";
-import FooterTopBar from "./FooterTopBar";
-import FooterNavigation from "./FooterNavigation";
-import FooterSubscription from "./FooterSubscription";
-import Copyright from "./Copyright";
+// Import dynamic from next/dynamic
+import dynamic from "next/dynamic";
+
+// Use dynamic to load FooterNavigation, FooterSubscription, and Copyright dynamically
+const FooterTopBar = dynamic(() => import("./FooterTopBar"));
+const FooterNavigation = dynamic(() => import("./FooterNavigation"));
+const FooterSubscription = dynamic(() => import("./FooterSubscription"));
+const Copyright = dynamic(() => import("./Copyright"));
 
 function Footer() {
   return (

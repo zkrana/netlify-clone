@@ -6,7 +6,7 @@ function Review() {
     <div className="container tab:max-w-7xl w-[90%] mx-auto lg:-mt-40 sm:-mt-32 -mt-20">
       <div className="review max-w-5xl mx-auto rounded-md p-7 bg-white">
         <div className="testimonial">
-          <figure className="company-logos flex items-center gap-5">
+          <figure className="company-logos max-w-[320px] flex items-center gap-5">
             <Image
               src="/enterprise/logo-netlify-small-monochrome-lightmode.svg"
               alt="Netlify"

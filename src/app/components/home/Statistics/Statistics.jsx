@@ -2,7 +2,7 @@ import React from "react";
 import "./stats.css";
 function Statistics() {
   return (
-    <div className="stats-wrapper xl:pt-20 tab:pt-14 pt-11 min-h-[450px] text-white">
+    <div className="stats-wrapper xl:pt-20 tab:pt-14 pt-11 xl:min-h-[450px] tab:min-h-[360px] sm:min-h-[320px]  min-h-[450px] text-white">
       <div className="container mx-auto">
         <div className="w-[90%] tab:max-w-6xl mx-auto flex flex-wrap gap-10 justify-between  items-center">
           <div className="stats-item sm:w-fit w-full">
