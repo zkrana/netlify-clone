@@ -25,6 +25,7 @@ function SolutionsCards() {
                 width={36}
                 height={36}
                 src="/icon/icon-1.png"
+                alt="Icon"
               />
             </div>
             <span>Unify your content sources</span>
@@ -37,6 +38,7 @@ function SolutionsCards() {
                 width={36}
                 height={36}
                 src="/icon/icon-2.png"
+                alt="Icon"
               />
             </div>
             <span>Modernize your web architecture </span>
@@ -49,6 +51,7 @@ function SolutionsCards() {
                 width={36}
                 height={36}
                 src="/icon/icon-3.png"
+                alt="Icon"
               />
             </div>
             <span>Unlock your web performance </span>
