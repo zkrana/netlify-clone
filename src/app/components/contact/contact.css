@@ -1,0 +1,9 @@
+.contact-wrapper {
+  background: linear-gradient(0deg, #1b205b 0%, #2e51ed 100%);
+}
+.form-group textarea {
+  @apply min-h-40;
+}
+.form-group select {
+  @apply bg-transparent;
+}

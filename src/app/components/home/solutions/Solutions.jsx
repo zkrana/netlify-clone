@@ -1,12 +1,6 @@
 import React from "react";
 import SolutionsCards from "./SolutionsCards";
-import Image from "next/image";
-
-const EnterpriseLogo = ({ src, alt }) => (
-  <div>
-    <Image src={src} width={127} height={76} alt={alt} />
-  </div>
-);
+import Enterprise from "./Enterprise";
 
 const InlineSVG = () => (
   <svg
@@ -95,19 +89,7 @@ function Solutions() {
         <span className="gradient-text">1 platform</span>
       </h2>
       <SolutionsCards />
-      <div className="enterprise xl:mt-20 lg:mt-16 mt-9">
-        <h2 className="xl:text-5xl text-3xl font-bold text-center text-black">
-          Enterprises run on Netlify
-        </h2>
-        <div className="enterprise-banner flex flex-wrap justify-center items-center gap-8 mt-9">
-          <EnterpriseLogo src="/enterprise/twilio.svg" alt="Twilio" />
-          <EnterpriseLogo src="/enterprise/mattel.svg" alt="Mattel" />
-          <EnterpriseLogo src="/enterprise/riot-games.svg" alt="Riot Games" />
-          <EnterpriseLogo src="/enterprise/google.svg" alt="Google" />
-          <EnterpriseLogo src="/enterprise/unilever.svg" alt="Unilever" />
-          <EnterpriseLogo src="/enterprise/peloton.svg" alt="Peloton" />
-        </div>
-      </div>
+      <Enterprise title="Enterprises run on Netlify" />
     </div>
   );
 }

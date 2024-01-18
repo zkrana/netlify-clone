@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
 import Image from "next/image";
-import Search from "../home/Search/Search";
-import HeaderContact from "../home/HeaderContact/HeaderContact";
+import Search from "./Search/Search";
+import HeaderContact from "./HeaderContact/HeaderContact";
 
 function Header() {
   const [transparentBg, setTransparentBg] = useState(true);
@@ -41,23 +41,23 @@ function Header() {
           <a href="/">
             <Image src="/logo.svg" width={122} height={50} alt="Logo" />
           </a>
-          <ul className=" xl:gap-5 gap-3 items-center xl:text-lg text-base xl:font-medium hidden lg:flex">
-            <li className="hover:scale-95 duration-300">
+          <ul className="main-nav items-center xl:text-base text-base xl:font-medium hidden lg:flex">
+            <li className="relative px-4 py-2 rounded hover:scale-95 duration-300">
               <a href="/Platform">Platform</a>
             </li>
-            <li className="hover:scale-95 duration-300">
+            <li className="relative px-4 py-2 rounded hover:scale-95 duration-300">
               <a href="/Solutions">Solutions</a>
             </li>
-            <li className="hover:scale-95 duration-300">
+            <li className="relative px-4 py-2 rounded hover:scale-95 duration-300">
               <a href="/Integrations">Integrations</a>
             </li>
-            <li className="hover:scale-95 duration-300">
+            <li className="relative px-4 py-2 rounded hover:scale-95 duration-300">
               <a href="/StartBuilding">Start Building</a>
             </li>
-            <li className="hover:scale-95 duration-300">
+            <li className="relative px-4 py-2 rounded hover:scale-95 duration-300">
               <a href="/Docs">Docs</a>
             </li>
-            <li className="hover:scale-95 duration-300">
+            <li className="relative px-4 py-2 rounded hover:scale-95 duration-300">
               <a href="/Pricing">Pricing</a>
             </li>
           </ul>
