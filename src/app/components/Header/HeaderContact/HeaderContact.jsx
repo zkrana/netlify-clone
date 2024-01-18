@@ -11,9 +11,12 @@ function HeaderContact() {
           <a href="/login">Login</a>
         </li>
       </ul>
-      <button className=" lg:block hidden xl:text-xl text-base w-28 h-10 bg-[#2E51ED] hover:scale-95 duration-300 font-medium text-white rounded-lg">
+      <a
+        href="/signup"
+        className=" lg:flex hidden xl:text-xl text-base w-28 h-10 justify-center items-center bg-[#2E51ED] hover:scale-95 duration-300 font-medium text-white rounded-lg"
+      >
         Sign Up
-      </button>
+      </a>
     </div>
   );
 }

@@ -1,10 +1,12 @@
 import React from "react";
-import "./login.css";
 
-function LoginBody() {
+function SignupBody() {
   return (
-    <div className="max-w-sm mx-auto">
-      <h1 className="text-3xl font-medium text-center mb-10">Log in</h1>
+    <div className="max-w-md mx-auto">
+      <h1 className="text-3xl font-medium text-center mb-10">
+        Sign up to deploy your project
+      </h1>
+
       <div className="flex flex-col sm:gap-5 gap-3">
         <button
           name="github"
@@ -35,7 +37,7 @@ function LoginBody() {
               ></path>
             </svg>
           </div>
-          Log in with GitHub
+          Sign up with GitHub
         </button>
 
         <button
@@ -70,7 +72,7 @@ function LoginBody() {
               ></path>
             </svg>
           </div>
-          Log in with GitLab
+          Sign up with GitLab
         </button>
 
         <button
@@ -116,7 +118,7 @@ function LoginBody() {
               </g>
             </svg>
           </div>
-          Log in with Bitbucket
+          Sign up with Bitbucket
         </button>
       </div>
 
@@ -125,24 +127,17 @@ function LoginBody() {
           class="text-sm block font-light underline cursor-pointer"
           type="button"
         >
-          Log in with email
-        </button>
-
-        <button
-          class="text-sm block font-light underline cursor-pointer"
-          type="button"
-        >
-          Log in with SSO
+          Sign up with email
         </button>
       </div>
 
       <div className="sm:mt-16 mt-10">
         <p className="text-xs text-center font-light underline">
-          No account yet? <a href="/signup">Sign up</a>
+          No account yet? <a href="/login">Sign in</a>
         </p>
       </div>
     </div>
   );
 }
 
-export default LoginBody;
+export default SignupBody;
